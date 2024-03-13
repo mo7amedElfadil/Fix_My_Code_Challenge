@@ -3,7 +3,17 @@
 
 
 class Square():
-    """ Square class """
+    """ Square class
+    Attribute:
+    width (int): width of the square
+    height (int): height of the square
+
+    methods:
+    area_of_my_square(self): returns the area of the square
+    PermiterOfMySquare(self): returns the permiter of the square
+    __str__(self): returns the string representation of the square
+    """
+
     width = 0
     height = 0
 
