@@ -21,16 +21,12 @@ class Square():
         """ Constructor """
         for key, value in kwargs.items():
             setattr(self, key, value)
-        if 'width' not in kwargs and self.height != self.width:
-            self.width = self.height
-        if 'height' not in kwargs and self.width != self.height:
-            self.height = self.width
 
     def area_of_my_square(self):
         """ Area of the Square """
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def permiter_of_my_square(self):
         """Permiter of the Square """
         return (self.width * 2) + (self.height * 2)
 
@@ -44,4 +40,4 @@ if __name__ == "__main__":
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.permiter_of_my_square())
