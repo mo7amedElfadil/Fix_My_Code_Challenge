@@ -8,7 +8,7 @@ class Square():
     """ Documentation """
 
     width = 0
-    height = 0
+    # height = 0
 
     def __init__(self, **kwargs):
         """ Constructor """
@@ -17,20 +17,20 @@ class Square():
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.height
+        return self.width * self.width
 
     def PermiterOfMySquare(self):
         """PermiterOfMySquare
         """
-        return (self.width * 2) + (self.height * 2)
+        return (self.width * 4) # + (self.height * 2)
 
     def __str__(self):
         """ String representation """
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.width, self.width)
 
 
 if __name__ == "__main__":
-    s = Square(width=12, height=12)
+    s = Square(width=12)
     print(s)
     print(s.area_of_my_square())
     print(s.PermiterOfMySquare())
