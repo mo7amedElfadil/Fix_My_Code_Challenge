@@ -25,7 +25,7 @@ class SinglePostActions {
                 var post = response.body;
                 var includes = post.includes || [], loadedIncludes = [];
                 var includeNum  = includes.length;
-                
+
                 var finish = function() {
                     self.actions.updateCurrentPost(post);
                     self.actions.updateIncludes(loadedIncludes);
@@ -55,7 +55,7 @@ class SinglePostActions {
                     };
 
                     var type, path;
-                    for(const i=0; i<includes.length; i++) {
+                    for(var i=0; i<includes.length; i++) {
                         type = includes[i].type;
                         path = includes[i].path;
                         IncludeHandler.handleInclude(type, path, includeCallback);
@@ -63,18 +63,18 @@ class SinglePostActions {
                 } else {
                     finish();
                 }
-            });   
+            });
         }
     }
 
     updateCurrentPost(post){
         this.dispatch(post);
     }
-    
+
     updateIncludes(includes) {
         this.dispatch(includes);
     }
-    
+
     reset() {
         this.dispatch();
     }
